@@ -1,0 +1,72 @@
+{
+  "BTCUSDT": {
+    "symbol": "BTCUSDT",
+    "exchanges": [
+      "coinbase"
+    ],
+    "price": 69194.005,
+    "volume": 0,
+    "change_24h": 0,
+    "timestamp": "2026-02-08T03:44:13.641761"
+  },
+  "ETHUSDT": {
+    "symbol": "ETHUSDT",
+    "exchanges": [
+      "coinbase"
+    ],
+    "price": 2082.975,
+    "volume": 0,
+    "change_24h": 0,
+    "timestamp": "2026-02-08T03:44:13.859193"
+  },
+  "SOLUSDT": {
+    "symbol": "SOLUSDT",
+    "exchanges": [
+      "coinbase"
+    ],
+    "price": 87.1,
+    "volume": 0,
+    "change_24h": 0,
+    "timestamp": "2026-02-08T03:44:14.283187"
+  },
+  "XRPUSDT": {
+    "symbol": "XRPUSDT",
+    "exchanges": [
+      "coinbase"
+    ],
+    "price": 1.4199,
+    "volume": 0,
+    "change_24h": 0,
+    "timestamp": "2026-02-08T03:44:14.576492"
+  },
+  "ADAUSDT": {
+    "symbol": "ADAUSDT",
+    "exchanges": [
+      "coinbase"
+    ],
+    "price": 0.27025,
+    "volume": 0,
+    "change_24h": 0,
+    "timestamp": "2026-02-08T03:44:14.891069"
+  },
+  "DOGEUSDT": {
+    "symbol": "DOGEUSDT",
+    "exchanges": [
+      "coinbase"
+    ],
+    "price": 0.09727,
+    "volume": 0,
+    "change_24h": 0,
+    "timestamp": "2026-02-08T03:44:15.359552"
+  },
+  "MATICUSDT": {
+    "symbol": "MATICUSDT",
+    "exchanges": [
+      "coinbase"
+    ],
+    "price": 0.0963,
+    "volume": 0,
+    "change_24h": 0,
+    "timestamp": "2026-02-08T03:44:15.783394"
+  }
+}

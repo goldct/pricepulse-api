@@ -1,0 +1,195 @@
+2026-02-08 09:44:41,125 - __main__ - INFO - 开始数据采集...
+2026-02-08 09:44:41,587 - __main__ - ERROR - Binance采集失败: string indices must be integers, not 'str'
+2026-02-08 09:44:43,486 - __main__ - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 09:44:43,489 - __main__ - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_014443.json
+2026-02-08 09:44:43,489 - __main__ - INFO - 
+=== 最新价格 ===
+2026-02-08 09:44:43,489 - __main__ - INFO - ADAUSDT: $0.27 (0.00%)
+2026-02-08 09:44:43,489 - __main__ - INFO - BTCUSDT: $69245.55 (0.00%)
+2026-02-08 09:44:43,489 - __main__ - INFO - DOGEUSDT: $0.10 (0.00%)
+2026-02-08 09:44:43,490 - __main__ - INFO - ETHUSDT: $2089.09 (0.00%)
+2026-02-08 09:44:43,490 - __main__ - INFO - MATICUSDT: $0.10 (0.00%)
+2026-02-08 09:44:43,490 - __main__ - INFO - 更新时间: 2026-02-08 01:44:43.487711
+2026-02-08 09:46:07,005 - __main__ - INFO - 开始数据采集...
+2026-02-08 09:46:07,477 - __main__ - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 09:46:09,595 - __main__ - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 09:46:09,597 - __main__ - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_014609.json
+2026-02-08 09:46:09,597 - __main__ - INFO - 
+=== 最新价格 ===
+2026-02-08 09:46:09,597 - __main__ - INFO - ADAUSDT: $0.27 (0.00%)
+2026-02-08 09:46:09,598 - __main__ - INFO - BTCUSDT: $69327.98 (0.00%)
+2026-02-08 09:46:09,598 - __main__ - INFO - DOGEUSDT: $0.10 (0.00%)
+2026-02-08 09:46:09,598 - __main__ - INFO - ETHUSDT: $2090.59 (0.00%)
+2026-02-08 09:46:09,598 - __main__ - INFO - MATICUSDT: $0.10 (0.00%)
+2026-02-08 09:46:09,598 - __main__ - INFO - 更新时间: 2026-02-08 01:46:09.596333
+2026-02-08 09:50:58,978 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 09:51:01,166 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 09:51:01,168 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_015101.json
+2026-02-08 11:24:14,702 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:24:16,958 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:24:16,960 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_032416.json
+2026-02-08 11:24:47,724 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:24:49,812 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:24:49,813 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_032449.json
+2026-02-08 11:25:20,277 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:25:21,722 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:25:21,723 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_032521.json
+2026-02-08 11:25:52,258 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:25:53,973 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:25:53,975 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_032553.json
+2026-02-08 11:26:24,410 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:26:26,169 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:26:26,171 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_032626.json
+2026-02-08 11:26:56,728 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:26:58,613 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:26:58,615 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_032658.json
+2026-02-08 11:27:29,063 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:27:31,296 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:27:31,298 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_032731.json
+2026-02-08 11:28:01,751 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:28:03,296 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:28:03,298 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_032803.json
+2026-02-08 11:28:33,755 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:28:35,648 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:28:35,650 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_032835.json
+2026-02-08 11:29:06,155 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:29:08,157 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:29:08,159 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_032908.json
+2026-02-08 11:29:38,618 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:29:40,727 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:29:40,728 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_032940.json
+2026-02-08 11:30:11,166 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:30:13,504 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:30:13,506 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_033013.json
+2026-02-08 11:30:44,037 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:30:45,874 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:30:45,877 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_033045.json
+2026-02-08 11:31:16,342 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:31:18,449 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:31:18,451 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_033118.json
+2026-02-08 11:31:48,907 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:31:50,577 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:31:50,580 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_033150.json
+2026-02-08 11:32:21,076 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:32:22,904 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:32:22,907 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_033222.json
+2026-02-08 11:32:53,472 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:32:55,415 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:32:55,416 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_033255.json
+2026-02-08 11:33:25,884 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:33:27,838 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:33:27,840 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_033327.json
+2026-02-08 11:33:58,291 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:34:00,404 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:34:00,407 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_033400.json
+2026-02-08 11:34:30,875 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:34:32,617 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:34:32,619 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_033432.json
+2026-02-08 11:35:03,170 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:35:04,781 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:35:04,783 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_033504.json
+2026-02-08 11:35:35,240 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:35:36,683 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:35:36,684 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_033536.json
+2026-02-08 11:36:07,123 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:36:09,619 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:36:09,620 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_033609.json
+2026-02-08 11:36:40,077 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:36:42,318 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:36:42,321 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_033642.json
+2026-02-08 11:37:12,788 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:37:14,381 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:37:14,384 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_033714.json
+2026-02-08 11:37:45,019 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:37:47,037 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:37:47,039 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_033747.json
+2026-02-08 11:38:17,492 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:38:19,170 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:38:19,172 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_033819.json
+2026-02-08 11:38:49,622 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:38:52,292 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:38:52,294 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_033852.json
+2026-02-08 11:39:22,753 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:39:24,354 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:39:24,357 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_033924.json
+2026-02-08 11:39:55,372 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:39:57,710 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:39:57,713 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_033957.json
+2026-02-08 11:40:28,174 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:40:29,596 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:40:29,599 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_034029.json
+2026-02-08 11:41:00,050 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:41:02,041 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:41:02,044 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_034102.json
+2026-02-08 11:41:33,025 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:41:34,134 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:41:34,137 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_034134.json
+2026-02-08 11:42:05,337 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:42:06,061 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:42:06,064 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_034206.json
+2026-02-08 11:42:36,520 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:42:38,623 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:42:38,624 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_034238.json
+2026-02-08 11:43:09,077 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:43:10,738 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:43:10,741 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_034310.json
+2026-02-08 11:43:41,186 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:43:43,172 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:43:43,175 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_034343.json
+2026-02-08 11:44:13,637 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:44:15,784 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:44:15,786 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_034415.json
+2026-02-08 11:44:46,233 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:44:48,143 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:44:48,146 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_034448.json
+2026-02-08 11:45:18,736 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:45:20,618 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:45:20,620 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_034520.json
+2026-02-08 11:45:51,070 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:45:52,920 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:45:52,923 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_034552.json
+2026-02-08 11:46:23,378 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:46:25,386 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:46:25,388 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_034625.json
+2026-02-08 11:46:55,842 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:46:57,860 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:46:57,862 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_034657.json
+2026-02-08 11:47:29,046 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:47:30,089 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:47:30,091 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_034730.json
+2026-02-08 11:48:00,541 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:48:02,505 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:48:02,507 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_034802.json
+2026-02-08 11:48:32,960 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:48:34,497 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:48:34,500 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_034834.json
+2026-02-08 11:49:04,949 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:49:07,334 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:49:07,336 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_034907.json
+2026-02-08 11:49:37,791 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:49:39,878 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:49:39,880 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_034939.json
+2026-02-08 11:50:10,321 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:50:12,527 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:50:12,528 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_035012.json
+2026-02-08 11:50:42,987 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:50:44,767 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:50:44,769 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_035044.json
+2026-02-08 11:51:15,220 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:51:17,229 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:51:17,231 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_035117.json
+2026-02-08 11:51:47,681 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:51:49,531 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:51:49,533 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_035149.json
+2026-02-08 11:52:19,986 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:52:21,796 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:52:21,798 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_035221.json
+2026-02-08 11:52:52,265 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:52:53,841 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:52:53,843 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_035253.json
+2026-02-08 11:53:24,301 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:53:26,157 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:53:26,159 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_035326.json
+2026-02-08 11:53:56,618 - crypto_collector - ERROR - Binance返回格式错误: <class 'dict'>
+2026-02-08 11:53:58,569 - crypto_collector - INFO - Coinbase: 获取到 7 个交易对数据
+2026-02-08 11:53:58,571 - crypto_collector - INFO - 数据已保存到: /Users/gold/clawd/million-dollar-plan/data/prices_20260208_035358.json

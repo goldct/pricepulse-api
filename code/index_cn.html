@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>价格脉动 - 实时加密货币价格API</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-900 text-white">
+    <!-- 导航栏 -->
+    <nav class="gradient-bg shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <span class="text-2xl">💰</span>
+                    </div>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold">价格脉动</h1>
+                        <p class="text-xs text-white/80">专业加密货币数据API</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#api" class="text-white/80 hover:text-white transition">API文档</a>
+                    <a href="#pricing" class="text-white/80 hover:text-white transition">价格方案</a>
+                    <a href="#features" class="text-white/80 hover:text-white transition">功能特性</a>
+                    <div class="flex items-center space-x-3">
+                        <a href="login.html" class="text-white/80 hover:text-white px-3 py-2 rounded-lg text-sm font-medium transition">
+                            登录
+                        </a>
+                        <a href="register.html" class="bg-white hover:bg-gray-100 text-purple-600 px-4 py-2 rounded-lg text-sm font-medium transition">
+                            免费注册
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center mb-12">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full mb-6">
+                <div class="w-2 h-2 bg-green-400 rounded-full pulse"></div>
+                <span class="text-sm font-medium text-green-400">服务运行中</span>
+            </div>
+
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                实时加密货币
+                <span class="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+                    价格数据API
+                </span>
+            </h2>
+
+            <p class="text-xl text-gray-400 mb-6 max-w-3xl mx-auto">
+                为开发者、交易者、投资者提供专业级的加密货币实时价格数据。
+                高精度、低延迟、7×24小时稳定服务。
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#pricing" class="gradient-bg px-8 py-3 rounded-xl font-semibold text-lg hover:opacity-90 transition">
+                    开始使用
+                </a>
+                <a href="#api" class="bg-white/10 px-8 py-3 rounded-xl font-semibold text-lg hover:bg-white/20 transition">
+                    查看文档
+                </a>
+            </div>
+        </div>
+
+        <!-- 核心数据 -->
+        <div class="flex flex-wrap justify-center gap-6 mb-12">
+            <div class="card-glass px-8 py-4 rounded-2xl">
+                <div class="text-3xl font-bold text-green-400 mb-1">99.9%</div>
+                <div class="text-sm text-gray-400">服务可用性</div>
+            </div>
+            <div class="card-glass px-8 py-4 rounded-2xl">
+                <div class="text-3xl font-bold text-blue-400 mb-1">&lt;100ms</div>
+                <div class="text-sm text-gray-400">响应延迟</div>
+            </div>
+            <div class="card-glass px-8 py-4 rounded-2xl">
+                <div class="text-3xl font-bold text-purple-400 mb-1">10+</div>
+                <div class="text-sm text-gray-400">主流币种</div>
+            </div>
+            <div class="card-glass px-8 py-4 rounded-2xl">
+                <div class="text-3xl font-bold text-orange-400 mb-1">7×24</div>
+                <div class="text-sm text-gray-400">技术支持</div>
+            </div>
+        </div>
+
+        <!-- 实时价格 -->
+        <div class="mb-16">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-2xl font-bold">实时行情</h3>
+                <div class="flex items-center gap-2 text-sm text-gray-400">
+                    <div class="w-2 h-2 bg-green-500 rounded-full pulse"></div>
+                    <span>实时更新</span>
+                </div>
+            </div>
+
+            <div id="prices-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                <!-- 价格卡片将通过JS动态生成 -->
+            </div>
+        </div>
+
+        <!-- 功能特性 -->
+        <div id="features" class="mb-16">
+            <h3 class="text-2xl font-bold mb-8 text-center">为什么选择我们？</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card-glass p-6 rounded-2xl">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h4 class="text-xl font-bold mb-2">超低延迟</h4>
+                    <p class="text-gray-400">平均响应时间小于100ms，数据实时更新，毫秒级延迟捕捉市场机会。</p>
+                </div>
+                <div class="card-glass p-6 rounded-2xl">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h4 class="text-xl font-bold mb-2">高精度数据</h4>
+                    <p class="text-gray-400">聚合多个主流交易所数据，提供准确的市场价格和交易量信息。</p>
+                </div>
+                <div class="card-glass p-6 rounded-2xl">
+                    <div class="text-4xl mb-4">🔒</div>
+                    <h4 class="text-xl font-bold mb-2">稳定可靠</h4>
+                    <p class="text-gray-400">99.9%服务可用性，7×24小时技术支持，数据永不丢失。</p>
+                </div>
+                <div class="card-glass p-6 rounded-2xl">
+                    <div class="text-4xl mb-4">💰</div>
+                    <h4 class="text-xl font-bold mb-2">价格透明</h4>
+                    <p class="text-gray-400">三种定价方案，按需选择，无隐藏费用，支持随时取消。</p>
+                </div>
+                <div class="card-glass p-6 rounded-2xl">
+                    <div class="text-4xl mb-4">📊</div>
+                    <h4 class="text-xl font-bold mb-2">丰富数据</h4>
+                    <p class="text-gray-400">支持10+主流加密货币，价格、交易量、涨跌幅等多维度数据。</p>
+                </div>
+                <div class="card-glass p-6 rounded-2xl">
+                    <div class="text-4xl mb-4">🚀</div>
+                    <h4 class="text-xl font-bold mb-2">快速接入</h4>
+                    <p class="text-gray-400">RESTful API接口，清晰文档，几分钟即可完成集成。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- API文档 -->
+        <div id="api" class="mb-16">
+            <h3 class="text-2xl font-bold mb-8 text-center">API 文档</h3>
+            <div class="card-glass rounded-2xl p-8">
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3 flex items-center gap-2">
+                            <span class="bg-blue-500 text-white px-2 py-1 rounded text-xs">GET</span>
+                            获取所有价格
+                        </h4>
+                        <code class="block bg-gray-800 rounded-lg p-4 text-sm overflow-x-auto">
+                            /api/prices
+                        </code>
+                        <p class="text-sm text-gray-400 mt-2">返回所有币种的实时价格数据</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3 flex items-center gap-2">
+                            <span class="bg-blue-500 text-white px-2 py-1 rounded text-xs">GET</span>
+                            获取指定币种
+                        </h4>
+                        <code class="block bg-gray-800 rounded-lg p-4 text-sm overflow-x-auto">
+                            /api/prices/{symbol}
+                        </code>
+                        <p class="text-sm text-gray-400 mt-2">返回指定币种的价格数据</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3 flex items-center gap-2">
+                            <span class="bg-blue-500 text-white px-2 py-1 rounded text-xs">GET</span>
+                            获取历史数据
+                        </h4>
+                        <code class="block bg-gray-800 rounded-lg p-4 text-sm overflow-x-auto">
+                            /api/history?limit=10
+                        </code>
+                        <p class="text-sm text-gray-400 mt-2">获取历史价格数据，可指定返回数量</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3 flex items-center gap-2">
+                            <span class="bg-blue-500 text-white px-2 py-1 rounded text-xs">GET</span>
+                            健康检查
+                        </h4>
+                        <code class="block bg-gray-800 rounded-lg p-4 text-sm overflow-x-auto">
+                            /api/health
+                        </code>
+                        <p class="text-sm text-gray-400 mt-2">检查API服务状态</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 定价方案 -->
+        <div id="pricing" class="mb-16">
+            <h3 class="text-2xl font-bold mb-8 text-center">价格方案</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 免费版 -->
+                <div class="card-glass rounded-2xl p-6">
+                    <h4 class="text-xl font-bold mb-2">免费版</h4>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">¥0</span>
+                        <span class="text-gray-400">/月</span>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400">✓</span>
+                            <span>5次/分钟API调用</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400">✓</span>
+                            <span>1小时数据延迟</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400">✓</span>
+                            <span>社区支持</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400">✓</span>
+                            <span>基础币种数据</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-white/10 hover:bg-white/20 py-3 rounded-xl text-sm font-medium transition">
+                        开始使用
+                    </button>
+                </div>
+
+                <!-- 基础版 -->
+                <div class="card-glass rounded-2xl p-6 border-2 border-green-500 relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-green-500 px-4 py-1 rounded-full text-sm font-semibold">
+                        推荐
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">基础版</h4>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">¥60</span>
+                        <span class="text-gray-400">/月</span>
+                        <div class="text-sm text-gray-500">约 $10</div>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400">✓</span>
+                            <span>100次/分钟API调用</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400">✓</span>
+                            <span>实时数据无延迟</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400">✓</span>
+                            <span>邮件支持</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400">✓</span>
+                            <span>全部币种数据</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400">✓</span>
+                            <span>历史数据查询</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-green-600 hover:bg-green-700 py-3 rounded-xl text-sm font-semibold transition">
+                        订阅
+                    </button>
+                </div>
+
+                <!-- 专业版 -->
+                <div class="card-glass rounded-2xl p-6">
+                    <h4 class="text-xl font-bold mb-2">专业版</h4>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">¥300</span>
+                        <span class="text-gray-400">/月</span>
+                        <div class="text-sm text-gray-500">约 $50</div>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400">✓</span>
+                            <span>1000次/分钟API调用</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400">✓</span>
+                            <span>WebSocket实时推送</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400">✓</span>
+                            <span>优先技术支持</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400">✓</span>
+                            <span>自定义API密钥</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-400">✓</span>
+                            <span>专属客户经理</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-white/10 hover:bg-white/20 py-3 rounded-xl text-sm font-medium transition">
+                        联系我们
+                    </button>
+                </div>
+            </div>
+
+            <!-- 企业版 -->
+            <div class="mt-8">
+                <div class="card-glass rounded-2xl p-8">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                        <div>
+                            <h4 class="text-2xl font-bold mb-2">企业定制版</h4>
+                            <p class="text-gray-400 max-w-xl">
+                                针对大型企业、金融机构的定制化解决方案。包括私有化部署、专属数据通道、7×24小时技术支持、SLA保障。
+                            </p>
+                        </div>
+                        <button class="bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition whitespace-nowrap">
+                            联系销售
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 常见问题 -->
+        <div class="mb-16">
+            <h3 class="text-2xl font-bold mb-8 text-center">常见问题</h3>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="card-glass rounded-2xl p-6">
+                    <h4 class="font-semibold mb-2">免费版真的免费吗？</h4>
+                    <p class="text-gray-400">是的，免费版完全免费，可以永久使用。只是有调用次数和数据延迟的限制。</p>
+                </div>
+                <div class="card-glass rounded-2xl p-6">
+                    <h4 class="font-semibold mb-2">支持哪些支付方式？</h4>
+                    <p class="text-gray-400">我们支持USDT（TRC20/ERC20）和支付宝付款。企业版还可以开具发票。</p>
+                </div>
+                <div class="card-glass rounded-2xl p-6">
+                    <h4 class="font-semibold mb-2">可以随时取消订阅吗？</h4>
+                    <p class="text-gray-400">可以随时取消，不会有额外费用。取消后服务会在当前计费周期结束后停止。</p>
+                </div>
+                <div class="card-glass rounded-2xl p-6">
+                    <h4 class="font-semibold mb-2">API调用次数用完了怎么办？</h4>
+                    <p class="text-gray-400">可以升级套餐或额外购买调用次数。基础版和专业版都有超量保护。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mb-12">
+            <div class="card-glass rounded-3xl p-12">
+                <h3 class="text-3xl font-bold mb-4">准备好开始了吗？</h3>
+                <p class="text-xl text-gray-400 mb-8">立即注册，获取你的API密钥，开始构建你的应用。</p>
+                <button class="gradient-bg px-10 py-4 rounded-xl font-bold text-lg hover:opacity-90 transition">
+                    免费开始使用
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-2xl">💰</span>
+                        <span class="text-xl font-bold">价格脉动</span>
+                    </div>
+                    <p class="text-sm text-gray-400">专业加密货币数据API服务</p>
+                </div>
+                <div class="flex items-center gap-6 text-sm text-gray-400">
+                    <a href="#" class="hover:text-white transition">关于我们</a>
+                    <a href="#" class="hover:text-white transition">隐私政策</a>
+                    <a href="#" class="hover:text-white transition">服务条款</a>
+                    <a href="#" class="hover:text-white transition">联系我们</a>
+                </div>
+            </div>
+            <div class="mt-6 pt-6 border-t border-gray-800 text-center text-sm text-gray-500">
+                <p>© 2026 价格脉动. All rights reserved.</p>
+                <p class="mt-2">TRC20 USDT: TYLRDHYgytrrobjH5jNUEiw1RzNuNaPUDm</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 配置
+        const API_BASE = window.location.origin + '/api';
+        const REFRESH_INTERVAL = 30000; // 30秒
+
+        // 币种信息
+        const coinInfo = {
+            'BTCUSDT': { name: 'Bitcoin', icon: '₿', color: '#f7931a' },
+            'ETHUSDT': { name: 'Ethereum', icon: 'Ξ', color: '#627eea' },
+            'BNBUSDT': { name: 'BNB', icon: '◆', color: '#f3ba2f' },
+            'SOLUSDT': { name: 'Solana', icon: '◎', color: '#00ffa3' },
+            'XRPUSDT': { name: 'XRP', icon: '✕', color: '#23292f' },
+            'ADAUSDT': { name: 'Cardano', icon: '₳', color: '#0033ad' },
+            'DOGEUSDT': { name: 'Dogecoin', icon: '🐕', color: '#c2a633' },
+            'MATICUSDT': { name: 'Polygon', icon: '▲', color: '#8247e5' }
+        };
+
+        // 加载价格
+        async function loadPrices() {
+            try {
+                const response = await fetch(`${API_BASE}/prices`);
+                const data = await response.json();
+
+                if (data.data) {
+                    displayPrices(data.data);
+                }
+            } catch (error) {
+                console.error('加载价格失败:', error);
+            }
+        }
+
+        // 显示价格
+        function displayPrices(prices) {
+            const grid = document.getElementById('prices-grid');
+            grid.innerHTML = '';
+
+            Object.entries(prices).forEach(([symbol, data]) => {
+                const coin = coinInfo[symbol] || { name: symbol, icon: '🪙', color: '#888888' };
+                const isPositive = data.change_24h >= 0;
+
+                const card = document.createElement('div');
+                card.className = 'card-glass rounded-2xl p-5 transition-all hover:scale-105';
+
+                card.innerHTML = `
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full flex items-center justify-center text-2xl" style="background: ${coin.color}20">
+                                ${coin.icon}
+                            </div>
+                            <div>
+                                <div class="font-bold">${coin.name}</div>
+                                <div class="text-xs text-gray-400">${symbol.replace('USDT', '')}/USDT</div>
+                            </div>
+                        </div>
+                        <div class="text-xs px-2 py-1 rounded ${isPositive ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}">
+                            ${data.exchanges[0] || 'Coinbase'}
+                        </div>
+                    </div>
+                    <div class="text-2xl font-bold mb-2">¥${formatPrice(data.price)}</div>
+                    <div class="flex items-center justify-between text-sm">
+                        <span class="${isPositive ? 'text-green-400' : 'text-red-400'}">
+                            ${isPositive ? '↑' : '↓'} ${Math.abs(data.change_24h).toFixed(2)}%
+                        </span>
+                        <span class="text-gray-500">
+                            ${(data.price * 7.2).toFixed(2)} CNY
+                        </span>
+                    </div>
+                `;
+
+                grid.appendChild(card);
+            });
+        }
+
+        // 格式化价格
+        function formatPrice(price) {
+            return price.toLocaleString('zh-CN', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: price >= 1 ? 2 : 4
+            });
+        }
+
+        // 初始化
+        loadPrices();
+        setInterval(loadPrices, REFRESH_INTERVAL);
+    </script>
+</body>
+</html>
