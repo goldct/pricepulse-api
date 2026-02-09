@@ -1,0 +1,40 @@
+name: API Health Check
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Every 6 hours
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  check-api:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check API Health
+        run: |
+          echo "Checking PricePulse API..."
+          response=$(curl -s https://pricepulse.top/api/health)
+          echo "API Status: $response"
+
+          if echo "$response" | grep -q '"status":"healthy"'; then
+            echo "✅ API is healthy"
+            exit 0
+          else
+            echo "❌ API is not healthy"
+            exit 1
+          fi
+
+  check-prices:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Price Data
+        run: |
+          echo "Checking price data..."
+          response=$(curl -s https://pricepulse.top/api/prices)
+
+          if echo "$response" | grep -q '"count":10'; then
+            echo "✅ Price data is available (10 coins)"
+            exit 0
+          else
+            echo "❌ Price data is not available"
+            exit 1
+          fi
